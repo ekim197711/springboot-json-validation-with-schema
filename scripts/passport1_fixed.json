@@ -1,0 +1,13 @@
+{
+  "person": {
+    "name": "Mike",
+    "age": 80
+  },
+  "passport": {
+    "tested-negative": true,
+    "test-date": "2021-03-13",
+    "has-been-sick-with-corona": false,
+    "vaccination-process-begun": true,
+    "vaccination-process-ended": true
+  }
+}

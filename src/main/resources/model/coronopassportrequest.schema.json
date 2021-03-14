@@ -1,0 +1,69 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://www.codeinvestigator.com/spaceshiprequest.schema.json",
+  "title": "Vaccination Passport",
+  "description": "New vaccination passport",
+  "type": "object",
+  "definitions": {
+    "person": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "social-security-number": {
+          "type": "string"
+        },
+        "age": {
+          "type": "integer"
+        }
+      },
+      "required": [
+        "name",
+        "age"
+      ]
+    },
+    "passport": {
+      "type": "object",
+      "description": "Corona passport information",
+      "properties": {
+        "vaccination-process-begun": {
+          "type": "boolean"
+        },
+        "vaccination-process-ended": {
+          "type": "boolean"
+        },
+        "tested-negative": {
+          "type": "boolean"
+        },
+        "test-date": {
+          "type": "string"
+        },
+        "has-been-sick-with-corona": {
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "vaccination-process-begun",
+        "vaccination-process-ended",
+        "tested-negative",
+        "has-been-sick-with-corona"
+      ]
+    }
+  },
+  "properties": {
+    "person": {
+      "$ref": "#/definitions/person",
+      "description": "Owner of Corona passport"
+    },
+    "passport": {
+      "$ref": "#/definitions/passport",
+      "description": "Corona information"
+    }
+  },
+  "required": [
+    "person",
+    "passport"
+  ]
+}
+
